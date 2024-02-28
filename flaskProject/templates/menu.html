@@ -5,17 +5,25 @@ Menu Page
 {% endblock %}
 
 {% block main %}
+
     <div class="products">
-        <div class="product-box">
-            <div class="product-box-heading">
-                <h2> Flat White </h2>
+        <p> jhgjhgjgjg</p>
+        {% for product in products %}
+            <p> test </p>
+            <div class="product-box">
+                <div class="product-box-heading">
+                    <h3>{{  product[0] }}</h3>
+                </div>
+                <div class="product-box-image">
+                    <img src="static/images/{{ product[2] }}">
+                </div>
+                <div class="product-box-info">
+                    <p>{{ product[1] }}</p>
+                    <p><strong>Size:</strong>{{ product[3] }}</p>
+                    <p><strong>Price:</strong>{{ product[4] }}</p>
+                </div>
             </div>
-            <div class="product-box-image">
-                <img src=/static/images/flatwhite.jpg>
-            </div>
-            <div class="product-box-info">
-                <p> A milky coffee often found in the antipodes. </p>
-            </div>
-        </div>
+        {% endfor %}
+
     </div>
 {% endblock %}

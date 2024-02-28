@@ -25,12 +25,11 @@ def render_homepage():
 @app.route('/menu')
 def render_menu_page():
     con = connect_to_database(DB_FILE)
-    query = 'SELECT name, description, image FROM products'
+    query = 'SELECT name, description, image, volume, price FROM products'
     cur = con.cursor()
     cur.execute(query)
     product_list = cur.fetchall()
-    print(product_list)
-    return render_template('menu.html')
+    return render_template('menu.html', products=product_list)
 
 
 @app.route('/contact')
