@@ -7,15 +7,13 @@ Menu Page
 {% block main %}
 
     <div class="products">
-        <p> jhgjhgjgjg</p>
         {% for product in products %}
-            <p> test </p>
             <div class="product-box">
                 <div class="product-box-heading">
                     <h3>{{  product[0] }}</h3>
                 </div>
                 <div class="product-box-image">
-                    <img src="static/images/{{ product[2] }}">
+                    <img src="/static/images/{{ product[2] }}.jpg">
                 </div>
                 <div class="product-box-info">
                     <p>{{ product[1] }}</p>
